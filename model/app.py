@@ -2,10 +2,9 @@ import streamlit as st
 import pickle
 import numpy as np
 
-# import the model
 pipe = pickle.load(open('pipe.pkl', 'rb'))
 df = pickle.load(open('df.pkl', 'rb'))
-st.title("Laptop Predictor")
+st.title("Laptop Price Prediction with Machine Learning")
 
 # brand
 company = st.selectbox('Brand', df['Company'].unique())
